@@ -22,7 +22,7 @@ st.write_stream(stream_data)
 #IDs from Spotify Developer Dashboard
 CLIENT_ID = '5ee273d90d6e4e59ab58bba4f6404dde'
 CLIENT_SECRET = 'c098389d7bca435f82e852a54e012ede'
-REDIRECT_URI= 'https://recommender-dyj8dtwznh39x2jevwntzx.streamlit.app/'
+REDIRECT_URI= 'https://iot-enabled-music-recommendation-system.streamlit.app/'
 
 # Spotify API endpoints
 BASE_URL = 'https://api.spotify.com/v1'
@@ -127,7 +127,6 @@ for track_id in track_ids:
                          'acousticness': 0}
 
   j = requests.get(BASE_URL + '/audio-features/' + track_id, headers=headers)
-  st.write(response.text)
   j = j.json()
 
   feature_dict[track_id]['danceability'] = j['danceability']
