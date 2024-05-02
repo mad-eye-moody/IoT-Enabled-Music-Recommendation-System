@@ -54,7 +54,7 @@ auth_response = requests.post(AUTH_URL, {
     'client_id': CLIENT_ID,
     'client_secret': CLIENT_SECRET,
 })
-st.write(auth_response.content)
+
 # convert the response to JSON
 auth_response_data = auth_response.json()
 headers = {'Authorization': 'Bearer {token}'.format(token=auth_response_data['access_token'])}
