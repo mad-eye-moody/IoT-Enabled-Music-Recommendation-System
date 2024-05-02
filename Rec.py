@@ -1,6 +1,5 @@
 # Establish connection with Spotify's API
-* Get authorization code
-* Obtain access token
+
 """
 
 import streamlit as st
