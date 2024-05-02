@@ -38,7 +38,7 @@ st.link_button("Please authorize the app", AUTHORIZATION_URL, help = "We need yo
 authorization_code = st.text_input("Authorization code:", help="Required to authorize the app", placeholder="You can find it appended in the url as a paramater", label_visibility="visible")
 
 # Get the authorization code from the user after they grant access
-if authorization_code is not None:
+if authorization_code:
     st.write("Authorization successful!")
     st.balloons()
 else:
